@@ -17,7 +17,7 @@ body {
 }
 
 .navbar:hover {
-    background: linear-gradient(90deg, #0057b33d, #0099ff57);
+    background: linear-gradient(90deg, #ffffff, #ffffff);
     /* Gradiente más oscuro al pasar el ratón */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     /* Sombra más pronunciada al pasar el ratón */
@@ -217,7 +217,7 @@ body {
     overflow: hidden;
 }
 
-.progress-bar {
+.progress-bar1 {
     line-height: 30px;
     color: white;
     text-align: center;
@@ -387,3 +387,28 @@ html {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
+
+/* Estilos para el contenedor de la barra de progreso */
+.progress-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Ajusta el tamaño máximo según lo necesites */
+  }
+  .progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    position: relative;
+    margin-right: 10px; /* Espacio entre la barra y el texto */
+  }
+  .progress-bar {
+    background-color: #4caf50;
+    height: 20px;
+    width: 0;
+    transition: width 0.5s;
+  }
+  #progress-text {
+    min-width: 40px; /* Ancho mínimo para el texto */
+    text-align: right;
+  }
