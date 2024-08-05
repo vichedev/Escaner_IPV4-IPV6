@@ -1,0 +1,389 @@
+body {
+    padding-top: 79px;
+    /* Espacio para el navbar fijo */
+    margin: 0;
+    /* Elimina el margen del body */
+}
+
+.navbar {
+    background: linear-gradient(90deg, #ffffffc2, hsla(195, 46%, 74%, 0.607));
+    /* Gradiente azul */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    z-index: 1030;
+    /* Asegura que el navbar esté sobre otros contenidos */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    /* Transición suave para cambios */
+}
+
+.navbar:hover {
+    background: linear-gradient(90deg, #0057b33d, #0099ff57);
+    /* Gradiente más oscuro al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Sombra más pronunciada al pasar el ratón */
+}
+
+.navbar-brand img {
+    max-width: 150px;
+    /* Ajusta el tamaño máximo del logo para mantener la proporción */
+    height: auto;
+    /* Mantiene la proporción de altura del logo */
+}
+
+.navbar-nav .nav-link {
+    color: #000000 !important;
+    /* Color blanco para el texto de los enlaces */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #119c80 !important;
+    /* Color amarillo para el texto en hover y activo */
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    /* Efecto de sombra en el texto */
+}
+
+.navbar-toggler {
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    /* Fondo blanco semitransparente para el botón */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMCAwTDEyIDEyIiBzdHJva2U9IiMwMDcwNzAiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==');
+    /* Icono de las líneas del menú */
+}
+
+.navbar-collapse {
+    justify-content: center;
+    /* Centra los elementos del menú */
+}
+
+.btn-primary {
+    background-color: #ffeb3b;
+    /* Botón de contacto en amarillo */
+    color: #333;
+    /* Texto del botón en color oscuro */
+    border: none;
+    border-radius: 20px;
+    /* Bordes redondeados para el botón */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Transiciones suaves */
+}
+
+.btn-primary:hover {
+    background-color: #fdd835;
+    /* Amarillo más oscuro al pasar el ratón */
+    transform: scale(1.05);
+    /* Efecto de escala al pasar el ratón */
+}
+
+.hero {
+    background: url('../img/fondo.jpg') no-repeat center center;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0);
+    text-align: center;
+    padding: 100px 20px;
+    height: 100vh;
+    /* Ocupa toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* Asegura que los elementos flotantes se posicionen en relación al contenedor */
+    overflow: hidden;
+    /* Evita que el contenido se expanda más allá del Hero */
+}
+
+.hero-content {
+    position: relative;
+    max-width: 100%;
+    /* Asegura que el contenido no se expanda más allá del contenedor */
+    text-align: center;
+    /* Centra el contenido en dispositivos móviles */
+}
+
+.hero-logo {
+    max-width: 600px;
+    /* Tamaño máximo del logo */
+    width: 100%;
+    /* Asegura que el logo se ajuste al contenedor sin estirarse */
+    height: auto;
+    animation: float 6s ease-in-out infinite;
+    margin-bottom: 20px;
+    /* Espacio debajo del logotipo */
+}
+
+/* Animación de flotación */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+        /* Ajusta el valor según el movimiento deseado */
+    }
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: coral;
+    margin-bottom: 20px;
+    /* Espacio debajo del texto */
+}
+
+.get-started-btn {
+    padding: 12px 30px;
+    /* Ajusta el tamaño del botón */
+    font-size: 1rem;
+    /* Ajusta el tamaño del texto del botón */
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Botón "Get Started" en la vista de escritorio */
+.get-started-btn:hover {
+    background-color: #fdd835;
+    /* Amarillo más oscuro al pasar el ratón */
+    transform: scale(1.05);
+    /* Efecto de escala al pasar el ratón */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .hero-logo {
+        max-width: 300px;
+        /* Tamaño máximo del logo en dispositivos móviles */
+    }
+}
+
+
+.feature-boxiz {
+    background: rgba(248, 249, 250, 0.9);
+    /* Fondo semi-transparente */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-height: 400px; /* Ajusta la altura máxima para el scroll interno */
+}
+.feature-box {
+    background: rgba(248, 249, 250, 0.9);
+    /* Fondo semi-transparente */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow-y: auto;
+    max-height: 400px; /* Ajusta la altura máxima para el scroll interno */
+}
+
+.feature-box h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.feature-box .form-control,
+.feature-box .form-select {
+    border-radius: 8px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box .btn-primary {
+    background-color: #ffeb3b;
+    color: #333;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.feature-box .btn-primary:hover {
+    background-color: #fdd835;
+    transform: scale(1.05);
+}
+
+.progress {
+    height: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    transition: width 0.3s ease;
+}
+
+#scan-results-container ul {
+    padding: 0;
+}
+
+#scan-results-container .list-group-item {
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #343a40;
+    color: #adb5bd;
+    padding: 20px 0;
+}
+
+footer h5 {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+footer h6 {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+footer a {
+    color: #adb5bd;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+footer .bi {
+    color: #adb5bd;
+    transition: color 0.3s ease;
+}
+
+footer .bi:hover {
+    color: #ffffff;
+}
+
+footer .footer-section {
+    margin-bottom: 20px;
+}
+
+footer hr {
+    border: 1px solid #adb5bd;
+    margin: 20px 0;
+}
+
+footer p {
+    color: #adb5bd;
+    margin: 0;
+}
+
+.description-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.description-list .list-group-item {
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+.ip-info {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ip-info a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.ip-info a:hover {
+    text-decoration: underline;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.d-flex .feature-box {
+    margin-bottom: 0;
+    /* Elimina el margen inferior para el contenedor de progreso del escaneo */
+}
+
+/* Personalización de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a3d9a5;
+    /* Color verde suave */
+    border-radius: 10px;
+    /* Bordes redondeados para el "thumb" */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* Color del área de la pista */
+    border-radius: 10px;
+    /* Bordes redondeados para el área de la pista */
+}
+
+/* Para Firefox */
+html {
+    scrollbar-width: thin;
+    /* Barra de desplazamiento fina */
+    scrollbar-color: #a3d9a5 #f1f1f1;
+    /* Color del "thumb" y del área de la pista */
+}
+
+.faq-section {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.faq-item .accordion-button {
+    font-weight: 500;
+}
+
+.accordion-item {
+    border-radius: 8px;
+    overflow: hidden;
+    /* Para asegurarse de que los bordes redondeados se apliquen correctamente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Opcional: agrega una sombra suave para un efecto más destacado */
+    margin-bottom: 10px;
+    /* Espacio entre los elementos del acordeón */
+}
+
+.accordion-button {
+    border-radius: 8px;
+    /* Bordes redondeados para el botón del acordeón */
+}
+
+.accordion-button:not(.collapsed) {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
